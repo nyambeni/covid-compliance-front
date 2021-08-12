@@ -17,6 +17,12 @@ export class ScreeningComponent implements OnInit {
   isBreathing = false;
   isFever = false;
   isSymptoms = false;
+<<<<<<< HEAD
+=======
+  has_cert = true;
+  
+  
+>>>>>>> a5ac5148f821d83a6a9dce0a85b0248f9d38e3da
 
   constructor(public appService: AppService) { }
 
