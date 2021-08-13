@@ -1,0 +1,97 @@
+<div class="container">
+
+    <div class="card text-center">
+        <div class="card-header">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" routerLink="/user-profile" routerLinkActive="active">Profile</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/user" routerLinkActive="active">Users</a>
+                  </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/screen-report" routerLinkActive="active">Screen Report</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Rules and Regulations</a>
+                </li>
+              
+              </ul>
+              
+            </div>
+          </nav>
+        </div>
+        
+      <!--/.Navbar-->
+    </div>
+    
+    <br><br>
+    <div class="card text-center">
+        <div class="card-header">
+          
+            <table style="border: 1px" width=100%>
+              <tr>
+                <th><h2>STUDENT</h2></th>
+              </tr>
+             <tr>
+              <th>ID Number</th>
+              <th>Email Address</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Contact Number</th>
+              </tr>
+
+              <tr *ngFor = "let data of arrayStud">
+                  <td>{{data.ID_num}}</td>
+                  <td>{{data.email}}</td>
+                  <td>{{data.fname}}</td>
+                  <td>{{data.lname}}</td>
+                  <td>{{data.address}}</td>
+                  <td>{{data.gender}}</td>
+                  <td>0{{data.contact}}</td>
+              </tr>
+            </table>
+        
+        </div>    
+    </div>
+
+    <br><br>
+    <div class="card text-center">
+        <div class="card-header">
+          
+          <table class="table table-hover table-light table-striped" id="table-data"  style="width: 100%; border: 1px;">
+              <tr>
+                <th><h2>STAFF</h2></th>
+              </tr>
+             <tr>
+              <th>ID Number</th>
+              <th>Email Address</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Contact Number</th>
+              </tr>
+
+              <tr *ngFor = "let data of arrayStaff">
+                  <td>{{data.ID_num}}</td>
+                  <td>{{data.email}}</td>
+                  <td>{{data.fname}}</td>
+                  <td>{{data.lname}}</td>
+                  <td>{{data.address}}</td>
+                  <td>{{data.gender}}</td>
+                  <td>0{{data.contact}}</td>
+              </tr>
+            </table>
+        
+        </div>    
+    </div>
+
+</div>
+

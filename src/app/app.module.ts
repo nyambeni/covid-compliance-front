@@ -8,7 +8,11 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScreeningComponent } from './screening/screening.component';
+import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserComponent } from './user/user.component';
+import { ScreenReportComponent } from './screen-report/screen-report.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     DashboardComponent,
     ScreeningComponent,
+    AdminComponent,
+    UserProfileComponent,
+    UserComponent,
+    ScreenReportComponent
   ],
   imports: [
     BrowserModule,

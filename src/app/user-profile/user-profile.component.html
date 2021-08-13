@@ -11,20 +11,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="screen_report">Users</a>
+                    <a class="nav-link" routerLink="/user" routerLinkActive="active">Users</a>
                   </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="screen_report">Screening Report</a>
+                    <a class="nav-link" routerLink="/screen-report" routerLinkActive="active">Screen Report</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Rules and Regulations</a>
                 </li>
               
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-2" type="submit">Search</button>
-              </form>
             </div>
           </nav>
         </div>
@@ -41,31 +37,43 @@
             <div>
                 <h2>Admin</h2>
             </div><br>
-              <div class="form-group">
-                <label for="regUsername">First Name</label>
-                <input type="text" name="first"  ngModel required #first="ngModel" class="form-control" id="regFname" placeholder="First Name">
-              </div>
-              <div class="form-group">
-                  <label for="loginUsername">Last Name</label>
-                  <input type="text" name="last"  ngModel required #last="ngModel" class="form-control" id="regLname" placeholder="Last Name">
-              </div>
-              <div class="form-group">
-                  <label for="loginUsername">Username</label>
-                  <input type="text" name="username" readonly ngModel required #username="ngModel" class="form-control" id="regUname" placeholder="Username">
-              </div>
-              <div class="form-group">
-                  <label for="loginUsername">Email</label>
-                  <input type="email" name="email" readonly ngModel required #email="ngModel" class="form-control" id="regLname" placeholder="Email Address">
-              </div>
+            <div *ngFor = "let data of arrayData">
+                  <div class="form-group">
+                    <label for="regUsername">First Name</label>
+                    <input type="text" name="first"  ngModel #first="ngModel" class="form-control" id="regFname" placeholder={{data.fname}}>
+                  </div>
+                  <div class="form-group">
+                      <label for="loginUsername">Last Name</label>
+                      <input type="text" name="last"  value={{data.fname}} ngModel #last="ngModel" class="form-control" id="regLname" placeholder={{data.lname}}>
+                  </div>
+                  <div class="form-group">
+                      <label for="loginUsername">ID Number</label>
+                      <input type="text" name="id_num" readonly ngModel #username="ngModel" class="form-control" id="regUname" placeholder={{data.ID_num}}>
+                  </div>
+                  <div class="form-group">
+                      <label for="loginUsername">Email</label>
+                      <input type="email" name="email" ngModel #email="ngModel" class="form-control" id="regLname" placeholder={{data.email}}>
+                  </div>
+                  <div class="form-group">
+                    <label for="loginUsername">Address</label>
+                    <input type="text" name="address" ngModel required #email="ngModel" class="form-control" id="regLname" placeholder={{data.address}}>
+                </div>
+                
+                  <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" name="password" ngModel required #password="ngModel" class="form-control" id="loginPassword" placeholder="Password">
+                    </div>
+            </div>
             
-              <div class="form-group">
-                <label for="loginPassword">Password</label>
-                <input type="password" name="password" ngModel required #password="ngModel" class="form-control" id="loginPassword" placeholder="Password">
+        </div>
+            
              <!-- </div>
               <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Submit</button>
         </div>-->
-        <br>
+        <br><br>
+           <div class="col-md-4 offset-md-3 mt-10">
             <input type="submit" value="submit">
-      </div>
+            </div>
+  </div>
 
 <router-outlet></router-outlet>
