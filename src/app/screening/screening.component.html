@@ -42,13 +42,13 @@
         <div *ngIf="has_cert">
             <form #screeningForm="ngForm" (ngSubmit)="onSubmit(screeningForm)" novalidate>
             <div class="form-group">
-                <label for="fullname"> Student Number </label>
-                <input type="hidden" ngModel name="id" #id="ngModel" class="form-control" id="id">
-                <input type="text" ngModel name="studentNo" required #fullname="ngModel" class="form-control" id="studentNo" placeholder="Student Number">
+                <label for="fullname"> Student/Staff Number </label>
+                <input type="hidden" ngModel name="screen_id" #id="ngModel" class="form-control" id="id">
+                <input type="text" ngModel name="stud_staff" required #stud_staff="ngModel" class="form-control" id="studentOrStaff" placeholder="Student Or Staff Number">
             </div>
             <div class="form-group">
                 <label for="temparature">Temperature</label>
-                <input type="text" ngModel name="temp" required #phone="ngModel" class="form-control" id="temparature" placeholder="Temparature">
+                <input type="text" ngModel name="temp" required #temp="ngModel" class="form-control" id="temparature" placeholder="Temperature">
             </div>
 
             <div class="form-group">
@@ -162,8 +162,8 @@
         </div>
 
         <div class="form-group">
-            <label for="temparature">Temperature</label>
-            <input type="text" ngModel name="temp" required #phone="ngModel" class="form-control" id="temparature" placeholder="Temparature">
+            <label for="temperature">Temperature</label>
+            <input type="text" ngModel name="temp" required #temp="ngModel" class="form-control" id="temparature" placeholder="Temperature">
         </div>
         
         <div class="form-group">
