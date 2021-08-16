@@ -1,12 +1,11 @@
 
 <div class="row">
 
-    <div class="col-md-6 offset-md-3 mt-4">
-    <h3>COVID-19 Screening Form</h3>
+   
     
    
     <div class="col-md-6 offset-md-3 mt-4">
-        
+    <h3>COVID-19 Screening Form</h3>
     
     <br>
     <div class="form-group col-md-6">
@@ -42,13 +41,13 @@
         <div *ngIf="has_cert">
             <form #screeningForm="ngForm" (ngSubmit)="onSubmit(screeningForm)" novalidate>
             <div class="form-group">
-                <label for="fullname"> Student Number </label>
-                <input type="hidden" ngModel name="id" #id="ngModel" class="form-control" id="id">
-                <input type="text" ngModel name="studentNo" required #fullname="ngModel" class="form-control" id="studentNo" placeholder="Student Number">
+                <label for="fullname"> Student/Staff Number </label>
+                <input type="hidden" ngModel name="screen_id" #id="ngModel" class="form-control" id="id">
+                <input type="text" ngModel name="stud_staff" required #stud_staff="ngModel" class="form-control" id="s" placeholder="Student Or Staff Number">
             </div>
             <div class="form-group">
-                <label for="temparature">Temperature</label>
-                <input type="text" ngModel name="temp" required #phone="ngModel" class="form-control" id="temparature" placeholder="Temparature">
+                <label for="temperature">Temperature</label>
+                <input type="text" ngModel name="temp" required #phone="ngModel" class="form-control" id="temperature" placeholder="Temperature">
             </div>
 
             <div class="form-group">
@@ -123,7 +122,7 @@
                 <input type="text" ngModel name="travelled" required #travelled="ngModel" class="form-control" id="travelled" placeholder="Have you travelled abroad in the last 1-2 months?">
             </div>
              <div class="form-group" ngModelGroup="submit_reset">
-                <button type="submit" class="btn btn-primary" name=""> Submit Stud </button> 
+                <button type="submit" class="btn btn-primary" name=""> Submit Student </button> 
                 
             </div>
     </form>
@@ -163,7 +162,7 @@
 
         <div class="form-group">
             <label for="temparature">Temperature</label>
-            <input type="text" ngModel name="temp" required #phone="ngModel" class="form-control" id="temparature" placeholder="Temparature">
+            <input type="text" ngModel name="temp" required #phone="ngModel" class="form-control" id="temparature" placeholder="Temperature">
         </div>
         
         <div class="form-group">
@@ -244,14 +243,15 @@
         
 
         <div class="form-group" ngModelGroup="submit_reset">
-            <button type="submit" class="btn btn-primary" name=""> Submit Vis </button> 
+            <button type="submit" class="btn btn-primary" name=""> Submit Visitor </button> 
             
         </div>
 
-
-
         
     </form>
+
+    
     
 </div>
 </div>
+

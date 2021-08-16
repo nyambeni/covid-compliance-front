@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserComponent } from './user/user.component';
 import { ScreenReportComponent } from './screen-report/screen-report.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ScreenReportComponent } from './screen-report/screen-report.component';
     AdminComponent,
     UserProfileComponent,
     UserComponent,
-    ScreenReportComponent
+    ScreenReportComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
