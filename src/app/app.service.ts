@@ -10,13 +10,14 @@ export class AppService {
 
   constructor(public httpClient: HttpClient) { }
 
-  url = "http://localhost:3000/client";
+  user_screening = "http://localhost:3000/screening";
   userStud = "http://localhost:3000/user/student";
   userStaff = "http://localhost:3000/user/staff";
 
   getClient() : Observable<any> {
-    return this.httpClient.get(this.url); 
+    return this.httpClient.get(this.user_screening); 
   }
+
   getStud() : Observable<any> {
     return this.httpClient.get(this.userStud);
   }
@@ -25,8 +26,8 @@ export class AppService {
     return this.httpClient.get(this.userStaff);
   }
 
-  addClient(client : any) : Observable<any> {
-    return this.httpClient.post<any>(this.url, client, {
+  screening(screening : any) : Observable<any> {
+    return this.httpClient.post<any>(this.user_screening, screening, {
       headers: new HttpHeaders({
           'Content-Type': 'application/json'
       })

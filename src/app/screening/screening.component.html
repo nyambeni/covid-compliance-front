@@ -42,50 +42,49 @@
             <form #screeningForm="ngForm" (ngSubmit)="onSubmit(screeningForm)" novalidate>
             <div class="form-group">
                 <label for="fullname"> Student/Staff Number </label>
-                <input type="hidden" ngModel name="screen_id" #id="ngModel" class="form-control" id="id">
                 <input type="text" ngModel name="stud_staff" required #stud_staff="ngModel" class="form-control" id="s" placeholder="Student Or Staff Number">
             </div>
             <div class="form-group">
                 <label for="temperature">Temperature</label>
-                <input type="text" ngModel name="temp" required #phone="ngModel" class="form-control" id="temperature" placeholder="Temperature">
+                <input type="number" ngModel name="temp" required #phone="ngModel" class="form-control" id="temperature" placeholder="Temperature">
             </div>
 
             <div class="form-group">
                 <label for="campus">Campus &nbsp;</label>
-                <select name="campus" id="campus">
-                    <option value="soshn">Soshanguve North</option>
-                    <option value="soshs">Soshanguve South</option>
-                    <option value="rank">Ga-Rankuwa</option>
-                    <option value="arc">Arcadia</option>
-                    <option value="art">Arts</option>
-                    <option value="emal">Emalehleni</option>
-                    <option value="main">Pretoria</option>
-                    <option value="pol">Polokwane</option>
+                <select ngModel name="campus" id="campus">
+                    <option value="soshanguve South Campus">Soshanguve South</option>
+                    <option value="soshanguve North Campus">Soshanguve North</option>
+                    <option value="Ga-Rankuwa Campus">Ga-Rankuwa</option>
+                    <option value="Arcadia Campus">Arcadia</option>
+                    <option value="Arts Campus">Arts</option>
+                    <option value="Emalehleni Campus">Emalehleni</option>
+                    <option value="Pretoria Campus">Pretoria</option>
+                    <option value="Polokwane Campus">Polokwane</option>
 
                   </select>
             </div>
-
             
-            <div class="form-group" ngModelGroup="symptoms">
+            
+            <div class="form-group">
                 <label for="symptoms">Do have any of the following symptoms?</label>
                 <div class="form-check">
                     <label class="form-check-label" for="cough">
-                    <input type="checkbox" ngModel name="cough"> New and Persistent cough
+                    <input type="checkbox" ngModel name="cough" value="cough"> New and Persistent cough
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label" for="breathing">
-                        <input type="checkbox" ngModel name="breathing"> Shortness of breath or any difficulty breathing
+                        <input type="checkbox" ngModel name="breathing" value="breathing"> Shortness of breath or any difficulty breathing
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label" for="fever">
-                        <input type="checkbox" ngModel name="fever"> Fever
+                        <input type="checkbox" ngModel name="fever" value="fever"> Fever
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label" for="symptoms">
-                        <input type="checkbox" ngModel name="symptom" > No Symptoms
+                        <strong>Other Symptoms</strong> <br><input type="text" ngModel name = "symptom" #symptom="ngModel" class="form-control" id="s" placeholder="Other Symptom">
                     </label>
                 </div>
                 
@@ -106,20 +105,20 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="contactCovid">Have you been in contact with anyone who has since tested positive for Covid-19?</label>
+                <label for="contact_covid">Have you been in contact with anyone who has since tested positive for Covid-19?</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" ngModel name="contactCovid" id="contactCovidYes" value="Yes">
-                    <label class="form-check-label">Yes</label>
+                    <input class="form-check-input" type="radio" ngModel name="contact_covid" value="Yes">
+                    <label class="form-check-label" for="contact_covidYes">Yes</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" ngModel name="contactCovid" id="contactCovidNo" value="No">
-                    <label class="form-check-label">No</label>
+                    <input class="form-check-input" type="radio" ngModel name="contact_covid" value="No">
+                    <label class="form-check-label" for="contact_covidNo">No</label>
                 </div>
                 
             </div>
             <div class="form-group">
                 <label for="travelled">Have you travelled abroad in the last 1-2 months?</label>
-                <input type="text" ngModel name="travelled" required #travelled="ngModel" class="form-control" id="travelled" placeholder="Have you travelled abroad in the last 1-2 months?">
+                <input type="text" ngModel name="travel" required #travelled="ngModel" class="form-control" id="travel" placeholder="Have you travelled abroad in the last 1-2 months?">
             </div>
              <div class="form-group" ngModelGroup="submit_reset">
                 <button type="submit" class="btn btn-primary" name=""> Submit Student </button> 
@@ -127,12 +126,6 @@
             </div>
     </form>
         </div> 
-       
-            
-
-
-       
-
 
 
 
@@ -168,14 +161,14 @@
         <div class="form-group">
             <label for="campus">Campus &nbsp;</label>
             <select name="campus" id="campus">
-                <option value="soshn">Soshanguve North</option>
-                <option value="soshs">Soshanguve South</option>
-                <option value="rank">Ga-Rankuwa</option>
-                <option value="arc">Arcadia</option>
-                <option value="art">Arts</option>
-                <option value="emal">Emalehleni</option>
-                <option value="main">Pretoria</option>
-                <option value="pol">Polokwane</option>
+                <option value="soshanguve South Campus">Soshanguve North</option>
+                <option value="soshanguve North Campus">Soshanguve South</option>
+                <option value="Ga-Rankuwa Campus">Ga-Rankuwa</option>
+                <option value="Arcadia Campus">Arcadia</option>
+                <option value="Arts Campus">Arts</option>
+                <option value="Emalehleni Campus">Emalehleni</option>
+                <option value="Pretoria Campus">Pretoria</option>
+                <option value="Polokwane Campus">Polokwane</option>
 
               </select>
         </div>

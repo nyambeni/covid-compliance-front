@@ -11,7 +11,7 @@ import { Client } from '../models/client.model';
 })
 export class ScreeningComponent implements OnInit { 
 
-  clientData: any;
+  screening_data: any;
 
   isCough = false;
   isBreathing = false;
@@ -29,7 +29,7 @@ export class ScreeningComponent implements OnInit {
   ngOnInit(): void {
     this.appService.getClient().subscribe( 
       response => {
-        this.clientData = response;
+        this.screening_data = response;
       }, error => {
         console.log(error , 'GET error!!!')
     });
@@ -37,22 +37,21 @@ export class ScreeningComponent implements OnInit {
   
   onSubmit(screeningForm: NgForm) {
     console.log(screeningForm.value);
-    let newClient = { 
-      id: screeningForm.value.id,
-      fullname: screeningForm.value.fullname,
-      phone: screeningForm.value.phone,
+    let newScreening = {
+      stud_staff: screeningForm.value.stud_staff,
+      screen_id: screeningForm.value.screen_id,
+      temp: screeningForm.value.temp,
+      campus: screeningForm.value.campus,
       cough: screeningForm.value.cough,
       breathing: screeningForm.value.breathing,
-      symptoms: screeningForm.value.symptoms,
       fever: screeningForm.value.fever,
       symptom: screeningForm.value.symptom,
       contact: screeningForm.value.contact,
-      contactCovid: screeningForm.value.contactCovid,
-      travelled: screeningForm.value.travelled,
-      appointment: screeningForm.value.appointment
+      contact_covid: screeningForm.value.contact_covid,
+      travel: screeningForm.value.travel
     }
 
-    this.appService.addClient(newClient).subscribe( 
+    this.appService.screening(newScreening).subscribe( 
       (data: any) => {
         console.log(data)
       }, (error: any) => {
