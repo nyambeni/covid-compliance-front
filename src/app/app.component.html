@@ -3,7 +3,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">{{title}}</span>
+      <a class="nav-link" routerLink="/landing" routerLinkActive="active"><strong>{{title}}</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -18,9 +18,6 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/login" routerLinkActive="active"><strong>Login</strong></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/registration" routerLinkActive="active"><strong>Registration</strong></a>
-          </li>
         </ul>
       </div>
     </div>
@@ -29,22 +26,72 @@
   <!--Nav bar end-->
 
 
-  
-
-
-
-
-
-
-
-
 <router-outlet></router-outlet>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
-<!--<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/login">Login</a>
-  <a routerLink="/registration">Registration</a>
-</nav>-->
+<div class="footer">
+    
+  
+  <footer class="border-top footer text-light bg-dark">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">Covid Compliance</h5>
+          <p>Tshwane University Of Technology Covid-9 Compliance System.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Useful Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/screening" routerLinkActive="active">Screening</a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+      
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      © 2021 Covid Compliance. <strong>All Rights Reserved.</strong>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+</div>  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

@@ -14,6 +14,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserComponent } from './user/user.component';
 import { ScreenReportComponent } from './screen-report/screen-report.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { LandingComponent } from './landing/landing.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { StatisticsComponent } from './statistics/statistics.component';
     UserProfileComponent,
     UserComponent,
     ScreenReportComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
