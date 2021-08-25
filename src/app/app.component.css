@@ -1,8 +1,18 @@
 /* AppComponent's private CSS styles */
+
+body{
+  min-height: 100%;
+}
 nav a:hover {
     color: white;
     background-color: #42545C;
   }
   nav a.active {
-    background-color: black;
+    border-bottom: 2px #f5f5f5 solid;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  .footer{
+    padding-top: 60px;
   }

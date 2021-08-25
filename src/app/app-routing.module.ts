@@ -8,6 +8,8 @@ import { AdminComponent } from './admin/admin.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserComponent } from './user/user.component';
 import { ScreenReportComponent } from './screen-report/screen-report.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { LandingComponent } from './landing/landing.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'user-profile' ,component: UserProfileComponent},
   {path: 'user' ,component: UserComponent},
   {path: 'screen-report' ,component: ScreenReportComponent},
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
+  {path: 'statistics' ,component: StatisticsComponent},
+  {path: 'landing' ,component: LandingComponent},
+  {path: '', redirectTo: '/landing', pathMatch: 'full'}
 ];
 
 @NgModule({
