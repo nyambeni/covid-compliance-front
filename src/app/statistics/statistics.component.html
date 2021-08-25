@@ -33,8 +33,11 @@
         <div class="card-header">
             Daily Report
         </div>
-        <div class="card-body">
-            <p class="card-text">Daily Campus Statistics</p>
+        <div class="card-body" *ngFor = "let data of dailyData">
+          <div  >
+             <p class="card-text" >Daily Campus Statistics: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.totnum}}</p>
+          </div>  
+         
 
             
             <table style="border: 1px" style="text-align: center" width=100%>
@@ -44,8 +47,17 @@
                    <th>Students</th>  
                    <th>Contractors</th>
                    <th>Visitors</th>
-                   <th>Screened</th>
+                   <th>Total Screened</th>
                    <th>Covid-19 Symptoms</th>
+                 </tr>
+
+                 <tr>
+                   <td *ngFor = "let staff of dailyStaff">{{staff.staffNum}}</td>
+                   <td *ngFor = "let stud of dailyStud">{{stud.studNum}}</td>
+                   <td *ngFor = "let const of dailyConst">{{const.constNum}}</td>
+                   <td *ngFor = "let vis of dailyVis">{{vis.visNum}}</td>
+                   <td>{{data.totnum}}</td>
+                   <td *ngFor = "let symp of dailySymp">{{symp.sympNum}}</td>
                  </tr>
             </table>
 
