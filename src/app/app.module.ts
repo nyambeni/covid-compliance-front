@@ -16,6 +16,7 @@ import { ScreenReportComponent } from './screen-report/screen-report.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { LandingComponent } from './landing/landing.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

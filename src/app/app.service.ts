@@ -55,9 +55,6 @@ export class AppService {
   getDailySymp() : Observable<any> {
     return this.httpClient.get(this.statSympUrl);
   }
-  // login() : Observable<any> {
-  //   return this.httpClient.get(this.userStaff);
-  // }
 
   login(newLogin : any) : Observable<any> {
     return this.httpClient.post<any>(this.userLogin, newLogin, {
@@ -65,6 +62,10 @@ export class AppService {
           'Content-Type': 'application/json'
       })
     });
+  }
+
+  loggedIn(){
+    return !!localStorage.getItem('token');
   }
   
   screening(screening : any) : Observable<any> {
