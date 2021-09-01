@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
 @Component({
@@ -10,14 +11,14 @@ export class UserProfileComponent implements OnInit {
 
   arrayData: any;
 
-  constructor(public appService: AppService) { }
+  constructor(public appService: AppService, private _router: Router) { }
 
   ngOnInit(): void {
     this.appService.getStaff().subscribe( 
       response => {
         this.arrayData = response;
       }, error => {
-        console.log(error , 'GET error!!!')
+        this._router.navigate(['/login'])
     });
   }
 
